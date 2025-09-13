@@ -1,0 +1,213 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  overflow-x: hidden;
+  background: radial-gradient(circle at center, #1a002e, #000000);
+  font-family: 'Segoe UI', sans-serif;
+  color: white;
+}
+
+canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.logo-core {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+}
+
+.logo-core img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  box-shadow: 0 0 15px #ffffff88;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px 10px 0;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.title-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.title-row h1 {
+  font-size: 2.2rem;
+  margin: 0;
+  font-weight: bold;
+  letter-spacing: 1px;
+  text-shadow: 0 0 10px #ffffff55;
+}
+
+.title-row img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  box-shadow: 0 0 10px #ffffff88;
+}
+
+.header p {
+  margin-top: 8px;
+  font-size: 1rem;
+  font-style: italic;
+  color: #cccccc;
+}
+
+.marquee-inside {
+  width: 100%;
+  margin-top: 10px;
+  background: transparent;
+  color: white;
+  font-size: 1rem;
+  font-weight: bold;
+  padding: 8px 0;
+}
+
+.marquee-inside marquee {
+  font-family: 'Segoe UI', sans-serif;
+  letter-spacing: 1px;
+}
+
+/* المحتوى الرئيسي */
+.main-content {
+  position: relative;
+  top: 250px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  z-index: 5;
+  padding: 20px;
+}
+
+.intro-text h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+  color: #ffffff;
+  text-shadow: 0 0 10px #ffffff44;
+}
+
+.intro-text p {
+  font-size: 1.1rem;
+  margin: 8px 0;
+  color: #dddddd;
+  line-height: 1.6;
+}
+
+/* زر البداية */
+.start-button {
+  margin-top: 25px;
+  background-color: #6f00ff;
+  color: white;
+  padding: 12px 25px;
+  font-size: 1.1rem;
+  border-radius: 30px;
+  text-decoration: none;
+  box-shadow: 0 0 15px #6f00ff88;
+  transition: all 0.3s ease;
+}
+
+.start-button i {
+  margin-left: 8px;
+}
+
+.start-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 0 25px #6f00ffcc;
+}
+
+/* الفوتر */
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  padding: 15px 0;
+  z-index: 10;
+}
+
+footer a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.2rem;
+  padding: 10px 15px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+footer a:hover {
+  background-color: #6f00ff;
+  transform: translateY(-5px);
+  box-shadow: 0 0 10px #6f00ff88;
+}
+
+footer a.active {
+  background-color: #6f00ff;
+  box-shadow: 0 0 10px #6f00ff88;
+  transform: translateY(-5px);
+}
+
+/* استجابة للشاشات الصغيرة */
+@media (max-width: 600px) {
+  .title-row h1 {
+    font-size: 1.5rem;
+  }
+
+  .title-row img {
+    width: 45px;
+    height: 45px;
+  }
+
+  .header p {
+    font-size: 0.9rem;
+  }
+
+  .marquee-inside {
+    font-size: 0.9rem;
+  }
+
+  .intro-text h2 {
+    font-size: 1.5rem;
+  }
+
+  .intro-text p {
+    font-size: 1rem;
+  }
+
+  .start-button {
+    font-size: 1rem;
+    padding: 10px 20px;
+  }
+
+  footer a {
+    font-size: 1rem;
+    padding: 8px 12px;
+  }
+}

@@ -1,0 +1,181 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  overflow-x: hidden;
+  background: radial-gradient(circle at center, #1a002e, #000000);
+  font-family: 'Segoe UI', sans-serif;
+  color: white;
+}
+
+canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.logo-core {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+}
+
+.logo-core img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  box-shadow: 0 0 15px #ffffff88;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px 10px 0;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.title-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.title-row h1 {
+  font-size: 2.2rem;
+  margin: 0;
+  font-weight: bold;
+  letter-spacing: 1px;
+  text-shadow: 0 0 10px #ffffff55;
+}
+
+.title-row img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  box-shadow: 0 0 10px #ffffff88;
+}
+
+.header p {
+  margin-top: 8px;
+  font-size: 1rem;
+  font-style: italic;
+  color: #cccccc;
+}
+
+.marquee-inside {
+  width: 100%;
+  margin-top: 10px;
+  background: transparent;
+  color: white;
+  font-size: 1rem;
+  font-weight: bold;
+  padding: 8px 0;
+}
+
+.marquee-inside marquee {
+  font-family: 'Segoe UI', sans-serif;
+  letter-spacing: 1px;
+}
+
+.courses {
+  position: relative;
+  top: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  z-index: 5;
+  flex-wrap: wrap;
+  padding: 20px;
+}
+
+.courses a img {
+  width: 220px;
+  height: 140px;
+  border-radius: 12px;
+  box-shadow: 0 0 15px #ffffff33;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.courses a img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px #ffffff66;
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  padding: 15px 0;
+  z-index: 10;
+}
+
+footer a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.2rem;
+  padding: 10px 15px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+footer a:hover {
+  background-color: #6f00ff;
+  transform: translateY(-5px);
+  box-shadow: 0 0 10px #6f00ff88;
+}
+
+footer a.active {
+  background-color: #6f00ff;
+  box-shadow: 0 0 10px #6f00ff88;
+  transform: translateY(-5px);
+}
+
+@media (max-width: 600px) {
+  .title-row h1 {
+    font-size: 1.5rem;
+  }
+
+  .title-row img {
+    width: 45px;
+    height: 45px;
+  }
+
+  .header p {
+    font-size: 0.9rem;
+  }
+
+  .marquee-inside {
+    font-size: 0.9rem;
+  }
+
+  .courses a img {
+    width: 160px;
+    height: 100px;
+  }
+
+  footer a {
+    font-size: 1rem;
+    padding: 8px 12px;
+  }
+}
